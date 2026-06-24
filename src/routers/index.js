@@ -1,9 +1,15 @@
 const { Router } = require('express');
+
 const usuarioRoutes = require('./usuarioRoutes');
+const setorizadaRoutes = require('./setorizadaRoutes');
+const passagemRoutes = require('./passagemRoutes');
+const presencaRoutes = require('./presencaRoutes');
 
 const routes = Router();
 
-// Injeta as rotas de usuários prefixadas com /usuarios
 routes.use('/usuarios', usuarioRoutes);
+routes.use('/setorizadas', setorizadaRoutes);
+routes.use('/passagens', passagemRoutes);
+routes.use('/presencas', presencaRoutes); 
 
 module.exports = routes;

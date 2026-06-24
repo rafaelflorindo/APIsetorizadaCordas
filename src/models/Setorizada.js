@@ -8,12 +8,16 @@ const Setorizada = sequelize.define('Setorizada', {
     primaryKey: true
   },
   data: {
-    type: DataTypes.DATEONLY, // DATEONLY armazena apenas AAAA-MM-DD, sem o fuso horário
+    type: DataTypes.DATEONLY, 
     allowNull: false
   },
   observacao: {
     type: DataTypes.TEXT,
     allowNull: true
+  },
+  status: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true
   }
 });
 

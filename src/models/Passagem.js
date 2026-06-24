@@ -15,11 +15,11 @@ const Passagem = sequelize.define('Passagem', {
     type: DataTypes.INTEGER,
     allowNull: false
   },
- tom: {
+  tom: {
     type: DataTypes.ENUM(
       'DÓ', 'DÓ#', 'RÉ', 'MÍB', 'RÉ#', 'MI', 'FÁ', 'FÁ#', 'SOL', 'SOL#', 'LÁB', 'LÁ', 'SI', 'SÍB'
     ),
-    allowNull: true // Permanece null caso a passagem seja de uma Lição que não foca em uma tonalidade específica
+    allowNull: true
   },
   observacao: {
     type: DataTypes.TEXT,
@@ -28,6 +28,10 @@ const Passagem = sequelize.define('Passagem', {
   dataPassagem: {
     type: DataTypes.DATEONLY,
     allowNull: false
+  },
+  status: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: true
   }
 });
 
