@@ -13,7 +13,7 @@ module.exports = {
       }
 
       const passagem = await Passagem.create({ 
-        tipo, 
+        tipo: tipo.toUpperCase(), // Garante consistência ('LICAO' ou 'HINO')
         numero, 
         tom, 
         observacao, 
@@ -31,7 +31,48 @@ module.exports = {
     }
   },
 
-  // 2. Listar todas as Passagens (Trazendo os dados do Aluno e Instrutor juntos)
+  // NEW: 2. Buscar histórico específico de um Aluno para o momento da aula
+  // Rota sugerida: GET /passagens/aluno/:aluno_id
+  async getHistoricoAluno(req, res) {
+    try {
+      const { aluno_id } = req.params;
+
+      // Busca todas as passagens ativas do aluno, ordenadas pela data e ID mais recentes
+      const passagens = await Passagem.findAll({
+        where: { 
+          aluno_id,
+          status: true 
+        },
+        include: [
+          { model: Usuario, as: 'instrutor', attributes: ['id', 'nome'] }
+        ],
+        order: [
+          ['dataPassagem', 'DESC'],
+          ['id', 'DESC']
+        ]
+      });
+
+      // Separa o array de forma limpa para facilitar a renderização no seu Frontend
+      const licoes = passagens.filter(p => p.tipo === 'LICAO');
+      const hinos = passagens.filter(p => p.tipo === 'HINO');
+
+      return res.json({
+        message: 'Histórico do aluno recuperado com sucesso!',
+        resumo: {
+          ultimaLicao: licoes[0] || null, // A lição mais recente no topo
+          ultimoHino: hinos[0] || null    // O hino mais recente no topo
+        },
+        historico: {
+          licoes,
+          hinos
+        }
+      });
+    } catch (error) {
+      return res.status(500).json({ error: 'Erro ao carregar histórico do aluno.', details: error.message });
+    }
+  },
+
+  // 3. Listar todas as Passagens gerais do sistema (Geral)
   async index(req, res) {
     try {
       const { tipo } = req.query;
@@ -43,11 +84,11 @@ module.exports = {
 
       const passagens = await Passagem.findAll({ 
         where: filtro,
-        // O Sequelize busca automaticamente as informações do Usuário usando os apelidos (as) que você definiu
         include: [
           { model: Usuario, as: 'aluno', attributes: ['id', 'nome', 'instrumento'] },
           { model: Usuario, as: 'instrutor', attributes: ['id', 'nome'] }
-        ]
+        ],
+        order: [['dataPassagem', 'DESC']]
       });
       
       return res.json({
@@ -60,7 +101,7 @@ module.exports = {
     }
   },
 
-  // 3. Buscar uma Passagem específica pelo ID (Com os dados de quem tocou e quem avaliou)
+  // 4. Buscar uma Passagem específica pelo ID
   async show(req, res) {
     try {
       const { id } = req.params;
@@ -84,7 +125,7 @@ module.exports = {
     }
   },
 
-  // 4. Atualizar os dados de uma Passagem
+  // 5. Atualizar os dados de uma Passagem
   async update(req, res) {
     try {
       const { id } = req.params;
@@ -99,7 +140,7 @@ module.exports = {
       await passagem.update({ tipo, numero, tom, observacao, dataPassagem, status, aluno_id, instrutor_id });
 
       return res.json({
-        message: 'Passagem atualizada com sucesso!',
+        message: 'Passagem updated com sucesso!',
         passagem
       });
     } catch (error) {
@@ -107,7 +148,7 @@ module.exports = {
     }
   },
 
-  // 5. Eliminação Lógica (Soft Delete)
+  // 6. Eliminação Lógica (Soft Delete)
   async delete(req, res) {
     try {
       const { id } = req.params;
@@ -128,7 +169,7 @@ module.exports = {
     }
   },
 
-  // 6. Reativação Lógica
+  // 7. Reativação Lógica
   async activate(req, res) {
     try {
       const { id } = req.params;

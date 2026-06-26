@@ -2,18 +2,28 @@ const { Presenca, Usuario, Setorizada } = require('../models/Index');
 
 module.exports = {
   // 1. Registrar uma nova Presença (Vinculando Usuário e Setorizada)
+  // 1. Registrar uma nova Presença (Evitando duplicidade)
   async store(req, res) {
     try {
       const { presente, usuario_id, setorizada_id } = req.body;
 
-      // Validação das chaves estrangeiras obrigatórias
       if (!usuario_id || !setorizada_id) {
         return res.status(400).json({ 
           error: 'Os campos usuario_id e setorizada_id são obrigatórios.' 
         });
       }
 
-      // Se o campo 'presente' não for enviado, o valor padrão do Model (true) entra em ação
+      // NOVO: Verifica se este usuário já possui registro de presença nesta Setorizada
+      const presencaExistente = await Presenca.findOne({
+        where: { usuario_id, setorizada_id }
+      });
+
+      if (presencaExistente) {
+        return res.status(400).json({ 
+          error: 'Já existe um registro de presença/falta para este usuário nesta data.' 
+        });
+      }
+
       const presenca = await Presenca.create({ 
         presente, 
         usuario_id, 
