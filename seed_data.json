@@ -1,0 +1,352 @@
+{
+  "usuarios": [
+    {
+      "nome": "Lucas Silva Santos",
+      "idade": 14,
+      "batizado": false,
+      "telefone": "(44) 99999-1111",
+      "telefoneResponsavel": "(44) 99999-2222",
+      "email": null,
+      "cpf": null,
+      "numeroRegistroInstrutor": null,
+      "endereco": "Rua das Flores, 123",
+      "bairro": "Zona 7",
+      "complemento": "Casa A",
+      "instrumento": "VIOLINO",
+      "tipo": "ALUNO",
+      "responsavelSetorizada": false,
+      "comumCongregacao": "Conjunto Requião",
+      "dataInicioGem": "2026-02-10",
+      "dataEncaminhamentoSetorizada": "2026-01-15",
+      "dataLiberacaoEnsaio": "2026-03-20",
+      "liberadoEnsaio": true,
+      "dataExameRjm": "2026-05-10",
+      "aprovadoRjm": true,
+      "dataExameCultoOficial": null,
+      "aprovadoCultoOficial": null,
+      "dataExameOficializacao": null,
+      "aprovadoOficializacao": null,
+      "status": true
+    },
+    {
+      "nome": "Mariana Oliveira Souza",
+      "idade": 28,
+      "batizado": true,
+      "telefone": "(44) 98888-3333",
+      "telefoneResponsavel": null,
+      "email": "mariana.instrutora@email.com",
+      "cpf": "123.456.789-00",
+      "numeroRegistroInstrutor": "INS-2026-889",
+      "endereco": "Av. Brasil, 4500",
+      "bairro": "Centro",
+      "complemento": "Apto 302",
+      "instrumento": "VIOLA",
+      "tipo": "INSTRUTOR",
+      "responsavelSetorizada": false,
+      "comumCongregacao": "Conjunto Requião",
+      "dataInicioGem": null,
+      "dataEncaminhamentoSetorizada": null,
+      "dataLiberacaoEnsaio": null,
+      "liberadoEnsaio": false,
+      "dataExameRjm": null,
+      "aprovadoRjm": null,
+      "dataExameCultoOficial": "2020-11-05",
+      "aprovadoCultoOficial": true,
+      "dataExameOficializacao": "2022-06-15",
+      "aprovadoOficializacao": true,
+      "status": true
+    },
+    {
+      "nome": "Carlos Alberto Ferreira",
+      "idade": 45,
+      "batizado": true,
+      "telefone": "(44) 97777-4444",
+      "telefoneResponsavel": null,
+      "email": "carlos.encarregado@email.com",
+      "cpf": "987.654.321-11",
+      "numeroRegistroInstrutor": null,
+      "endereco": "Rua Piauí, 78",
+      "bairro": "Vila Operária",
+      "complemento": null,
+      "instrumento": "CONTRABAIXO",
+      "tipo": "ENCARREGADO LOCAL",
+      "responsavelSetorizada": true,
+      "comumCongregacao": "Conjunto Requião",
+      "dataInicioGem": null,
+      "dataEncaminhamentoSetorizada": null,
+      "dataLiberacaoEnsaio": null,
+      "liberadoEnsaio": false,
+      "dataExameRjm": null,
+      "aprovadoRjm": null,
+      "dataExameCultoOficial": null,
+      "aprovadoCultoOficial": null,
+      "dataExameOficializacao": "2015-04-22",
+      "aprovadoOficializacao": true,
+      "status": true
+    },
+    {
+      "nome": "Roberto Mendes Albuquerque",
+      "idade": 52,
+      "batizado": true,
+      "telefone": "(44) 96666-5555",
+      "telefoneResponsavel": null,
+      "email": "roberto.regional@email.com",
+      "cpf": "456.123.789-22",
+      "numeroRegistroInstrutor": null,
+      "endereco": "Av. Tiradentes, 1200",
+      "bairro": "Zona 1",
+      "complemento": "Bloco B",
+      "instrumento": "VIOLONCELO",
+      "tipo": "ENCARREGADO REGIONAL",
+      "responsavelSetorizada": true,
+      "comumCongregacao": "Central de Maringá",
+      "dataInicioGem": null,
+      "dataEncaminhamentoSetorizada": null,
+      "dataLiberacaoEnsaio": null,
+      "liberadoEnsaio": false,
+      "dataExameRjm": null,
+      "aprovadoRjm": null,
+      "dataExameCultoOficial": null,
+      "aprovadoCultoOficial": null,
+      "dataExameOficializacao": "2010-08-12",
+      "aprovadoOficializacao": true,
+      "status": true
+    }
+  ],
+  "setorizadas": [
+    {
+      "data": "2026-02-07",
+      "observacao": "1ª Reunião Setorizada de Fevereiro - Alinhamento inicial do ano",
+      "status": true
+    },
+    {
+      "data": "2026-02-21",
+      "observacao": "2ª Reunião Setorizada de Fevereiro - Avaliação de métodos",
+      "status": true
+    },
+    {
+      "data": "2026-03-07",
+      "observacao": "1ª Reunião Setorizada de Março - Preparação para ensaios locais",
+      "status": true
+    },
+    {
+      "data": "2026-03-21",
+      "observacao": "2ª Reunião Setorizada de Março - Cronograma de exames RJM",
+      "status": true
+    },
+    {
+      "data": "2026-04-04",
+      "observacao": "1ª Reunião Setorizada de Abril - Revisão técnica de instrumentos",
+      "status": true
+    },
+    {
+      "data": "2026-04-18",
+      "observacao": "2ª Reunião Setorizada de Abril - Alinhamento com instrutores",
+      "status": true
+    },
+    {
+      "data": "2026-05-02",
+      "observacao": "1ª Reunião Setorizada de Maio - Planejamento de pré-exames",
+      "status": true
+    },
+    {
+      "data": "2026-05-16",
+      "observacao": "2ª Reunião Setorizada de Maio - Fechamento de relatórios mensais",
+      "status": true
+    },
+    {
+      "data": "2026-06-06",
+      "observacao": "1ª Reunião Setorizada de Junho - Avaliação do primeiro semestre",
+      "status": true
+    },
+    {
+      "data": "2026-06-20",
+      "observacao": "2ª Reunião Setorizada de Junho - Planejamento para o recesso/férias",
+      "status": true
+    }
+  ],
+  "presencas": [
+    {
+      "usuario_id": 1,
+      "setorizada_id": 1,
+      "presente": true
+    },
+    {
+      "usuario_id": 1,
+      "setorizada_id": 2,
+      "presente": true
+    },
+    {
+      "usuario_id": 1,
+      "setorizada_id": 3,
+      "presente": true
+    },
+    {
+      "usuario_id": 1,
+      "setorizada_id": 4,
+      "presente": false
+    },
+    {
+      "usuario_id": 1,
+      "setorizada_id": 5,
+      "presente": true
+    },
+    {
+      "usuario_id": 1,
+      "setorizada_id": 6,
+      "presente": true
+    },
+    {
+      "usuario_id": 1,
+      "setorizada_id": 7,
+      "presente": false
+    },
+    {
+      "usuario_id": 1,
+      "setorizada_id": 8,
+      "presente": true
+    },
+    {
+      "usuario_id": 1,
+      "setorizada_id": 9,
+      "presente": true
+    },
+    {
+      "usuario_id": 1,
+      "setorizada_id": 10,
+      "presente": false
+    }
+  ],
+  "passagens": [
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 12,
+      "tom": "DÓ",
+      "observacao": "Iniciou o método na lição 12. Boa postura do arco.",
+      "dataPassagem": "2026-02-07",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 13,
+      "tom": "DÓ",
+      "observacao": "Passou junto com a anterior.",
+      "dataPassagem": "2026-02-07",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 14,
+      "tom": "SOL",
+      "observacao": "Ajustar afinação do terceiro dedo.",
+      "dataPassagem": "2026-02-21",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 15,
+      "tom": "SOL",
+      "observacao": "Ritmo correto.",
+      "dataPassagem": "2026-02-21",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 16,
+      "tom": "RÉ",
+      "observacao": "Avanço muito bom hoje, passou 5 lições no total!",
+      "dataPassagem": "2026-02-21",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 17,
+      "tom": "RÉ",
+      "observacao": "Avanço em lote.",
+      "dataPassagem": "2026-02-21",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 18,
+      "tom": "LA",
+      "observacao": "Última lição do dia.",
+      "dataPassagem": "2026-02-21",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 19,
+      "tom": "SOL",
+      "observacao": "Rendimento menor hoje, passou apenas 1 lição devido à dificuldade no staccato.",
+      "dataPassagem": "2026-03-07",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 20,
+      "tom": "DÓ",
+      "observacao": "Estudou bem em casa.",
+      "dataPassagem": "2026-05-02",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 21,
+      "tom": "DÓ",
+      "observacao": "Passou rápido.",
+      "dataPassagem": "2026-05-02",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "HINO",
+      "numero": 1,
+      "tom": "DÓ",
+      "observacao": "Primeiro hino avaliado e aprovado para o GEM.",
+      "dataPassagem": "2026-05-16",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 22,
+      "tom": "FA",
+      "observacao": "Retorno às lições do método.",
+      "dataPassagem": "2026-05-16",
+      "status": true
+    },
+    {
+      "aluno_id": 1,
+      "instrutor_id": 2,
+      "tipo": "LICAO",
+      "numero": 23,
+      "tom": "FA",
+      "observacao": "Atenção aos acidentes na clave.",
+      "dataPassagem": "2026-06-06",
+      "status": true
+    }
+  ]
+}
